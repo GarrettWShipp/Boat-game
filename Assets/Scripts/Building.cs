@@ -6,12 +6,9 @@ public class Building : MonoBehaviour
 {
     public GameObject BuilderPos;
     public GameObject Material;
+    public Transform Blueprint;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+
 
     // Update is called once per frame
     void Update()
@@ -47,11 +44,11 @@ public class Building : MonoBehaviour
             transform.position += Vector3.down;
         }
 
-        //Creating game object
+        //Creating game object and putting it in blueprint parent
 
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
-            Instantiate(Material, transform.position, Quaternion.identity);
+            Instantiate(Material, transform.position, Quaternion.identity, Blueprint);
         }
     }
 }
