@@ -12,7 +12,7 @@ public class FindCenterPoint : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //center.center = Vector3.zero;
+        center.center = Vector3.zero;
         avgVec = new Vector3(0.0f, 0.0f, 0.0f);
     }
 
